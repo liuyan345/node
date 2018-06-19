@@ -1,5 +1,5 @@
 <?php
 
-echo "this is node test";
+echo "this is node test.";
 
 ?>
