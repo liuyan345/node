@@ -2,6 +2,7 @@
 var events = require('events');
 // 创建 eventEmitter 对象
 var eventEmitter = new events.EventEmitter();
+// 出发错误
 eventEmitter.emit('error'); 
 // 创建事件处理程序
 var connectHandler = function connected() {
@@ -10,6 +11,10 @@ var connectHandler = function connected() {
    // 触发 data_received 事件 
    eventEmitter.emit('data_received');
 }
+
+eventEmitter.on('error',function(err){
+    console.error('Error:',err);
+});
 
 // 绑定 connection 事件处理程序
 eventEmitter.on('connection', connectHandler);
