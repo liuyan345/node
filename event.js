@@ -2,7 +2,7 @@
 var events = require('events');
 // 创建 eventEmitter 对象
 var eventEmitter = new events.EventEmitter();
-emitter.emit('error'); 
+eventEmitter.emit('error'); 
 // 创建事件处理程序
 var connectHandler = function connected() {
    console.log('连接成功。');
