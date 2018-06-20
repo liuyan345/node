@@ -19,3 +19,16 @@ var objBase = new Base();
 objBase.showName();
 objBase.sayHello();
 console.log(objBase);
+
+
+function Sub(){
+	this.name = 'sub';
+}
+
+util.inherits(Sub,Base);
+
+var objSub = new Sub();
+
+objSub.showName();
+
+console.log(objSub);
