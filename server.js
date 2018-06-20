@@ -35,7 +35,7 @@ var http = require("http");
 var fs = require("fs");
 var url = require("url");
 
-http.createServer(function(require.response){
+http.createServer(function(require,response){
 	var pathname = url.parse(request.url).pathname;
 	console.log(pathname);
 	console.log(pathname.substr(1));
