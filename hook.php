@@ -44,6 +44,8 @@ class Hook
 
         $this->hookLog('3', $this->_content);
         $result = self::makeFun($flagArr, $Flag);
+        error_log(print_r($result), 3, "./test.log");
+
         $str    = self::result($result);
 
         return $str;
