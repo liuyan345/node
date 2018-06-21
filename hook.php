@@ -159,7 +159,7 @@ class Hook
             $str .= self::$htmlchars;
             // $a = shell_exec('cd /data/www/node;git stash; git pull;');
             $a = shell_exec('cd /data/www/node; git pull;');
-            // error_log(json_encode($a), 3, "./test.log");
+            error_log(json_encode($a), 3, "./test.log");
 
             $str .= PHP_EOL . "git" . self::$success;
         } else {
