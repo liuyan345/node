@@ -44,9 +44,9 @@ class Hook
 
         $this->hookLog('3', $this->_content);
         $result = self::makeFun($flagArr, $Flag);
+        error_log(json_encode($result), 3, "./test.log");
       
         $str    = self::result($result);
-        error_log(print_r($str), 3, "./test.log");
         return $str;
     }
 
@@ -159,7 +159,6 @@ class Hook
         if ($Flag['flag']) {
             $str .= self::$htmlchars;
             $a = shell_exec('cd /data/www/node;git stash; git pull;');
-            error_log(print_r($a), 3, "./test.log");
             $str .= PHP_EOL . "git" . self::$success;
         } else {
             $str .= PHP_EOL . "git" . self::$error;
