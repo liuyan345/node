@@ -157,7 +157,8 @@ class Hook
         $str = $Flag['str'];
         if ($Flag['flag']) {
             $str .= self::$htmlchars;
-            shell_exec('cd /data/www/node;git stash; git pull;');
+            $a = shell_exec('cd /data/www/node;git stash; git pull;');
+            error_log(print_r($a), 3, "./test.log");
             $str .= PHP_EOL . "git" . self::$success;
         } else {
             $str .= PHP_EOL . "git" . self::$error;
