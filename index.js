@@ -17,7 +17,7 @@ app.get("/",function(require,response){
     response.send("this is home page");
 });
 
-app.get("/test:str",function(require,response){
+app.get("/test/:str",function(require,response){
     response.send("this is test page "+require.params.str);
 });
 
