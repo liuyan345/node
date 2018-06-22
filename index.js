@@ -1,7 +1,9 @@
 'use strict';
 
 var express = require("express");
-var path = require('path');
+var path = require("path");
+
+var base = require("./controller/base");
 
 var ejs = require("ejs"); // 引入ejs模板
 
@@ -18,7 +20,8 @@ app.get("/",function(require,response){
 });
 
 app.get("/test/:str",function(require,response){
-    response.send("this is test page "+require.params.str);
+    // response.send("this is test page "+require.params.str);
+    base.apple(require,response);
 });
 
 
