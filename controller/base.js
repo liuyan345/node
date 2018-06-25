@@ -1,7 +1,10 @@
+'use strict';
+var express = require('express');
+var router = express.Router();
 
-function apple(require,response) {
-    // console.log("About to route a request for " + pathname);
-    response.send("this is test page "+require.params.str);
-}
+router.get('/read', function(req, res) {
+    res.send("read")
+});
 
-exports.base = base;
+
+module.exports = router;

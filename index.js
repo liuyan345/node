@@ -19,10 +19,11 @@ app.get("/",function(require,response){
     response.send("this is home page");
 });
 
-app.get("/test/:str",function(require,response){
+app.use("/base",base);
+
+// app.get("/test/:str",function(require,response){
     // response.send("this is test page "+require.params.str);
-    base.apple(require,response);
-});
+// });
 
 
 app.listen(8888);// 设置监听端口
