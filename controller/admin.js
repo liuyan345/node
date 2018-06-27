@@ -15,7 +15,8 @@ admin.use(function(req,res,next){
 });
 
 //访问形式：http://node.qkllt.xin/base/read
-admin.get('/login', user.login);
+admin.get('/login', user.login);//用户登录
+admin.get('/getOrder', user.getOrder);// 测试获取订单号
 
 admin.get('/plat', function(req, res) {
     res.send("plat")

@@ -25,6 +25,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "format-datetime": "^1.0.2",
     "multer": "^1.3.0"
   }
 }
