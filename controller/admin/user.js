@@ -1,4 +1,4 @@
-// var common = require("../common.js");
+var common = require("../common.js");
 var user = {};
 
 user.login = function (req,res,next){
