@@ -4,6 +4,7 @@ var express = require("express");
 var path = require("path");
 
 var admin = require("./controller/admin");
+var common = require("./controller/common");
 
 var ejs = require("ejs"); // 引入ejs模板
 
