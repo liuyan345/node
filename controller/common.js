@@ -4,7 +4,7 @@ var common = {};
 // 生成订单号
 common.getOrderNum = function(){
     var myDate  = new Date();
-    return dateFormat(myDate,"yyyyMMddHHiiss")+common.randomNum(1000,9999);
+    return dateFormat(myDate,"yyyyMMddHHmmss")+common.randomNum(1000,9999);
 }
 
 
