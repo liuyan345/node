@@ -1,9 +1,9 @@
 'use strict';
 
 var express = require("express");
-var path = require("path");
+// var path = require("path");
 
-var base = require("./controller/base");
+var admin = require("./controller/admin");
 
 var ejs = require("ejs"); // 引入ejs模板
 
@@ -19,7 +19,12 @@ app.get("/",function(require,response){
     response.send("this is home page");
 });
 
-app.use("/base",base);
+app.use("/admin",admin);
+
+// 未知路由错误
+app.use(function(req,res){
+    res.send("页面不存在");
+})
 
 // app.get("/test/:str",function(require,response){
     // response.send("this is test page "+require.params.str);
