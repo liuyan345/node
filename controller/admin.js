@@ -6,11 +6,12 @@ var admin = express.Router();
 admin.use(function(req,res,next){
     console.log("middel1");
     next();
-})
+});
 
 admin.use(function(req,res,next){
     console.log("middel2");
-})
+    next();
+});
 
 //访问形式：http://node.qkllt.xin/base/read
 admin.get('/login', function(req, res) {
