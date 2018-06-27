@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require("express");
-// var path = require("path");
+var path = require("path");
 
 var admin = require("./controller/admin");
 
