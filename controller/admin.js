@@ -2,6 +2,15 @@
 var express = require('express');
 var admin = express.Router();
 
+// 中间件处理程序
+admin.use(function(req,res,next){
+    console.log(midlle1);
+    next();
+})
+
+admin.use(function(req,res,next){
+    console.log(midlle2);
+})
 
 //访问形式：http://node.qkllt.xin/base/read
 admin.get('/login', function(req, res) {
